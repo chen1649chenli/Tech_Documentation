@@ -5,7 +5,6 @@ Note: the comand below is for Mac only. Windows may use slightly different comma
 
 Step 1. Create a directory for a project   
 ``` conda create --name mynewenv flask sqlalchemy```
-note: need to pass in at least one package in the above command. Could use pip as a default.
 
 Step 2. Activate the python environment   
 run ```source activate mynewenv```
@@ -15,7 +14,7 @@ run ```source deactivate```
 
 
 Step 4. Create a different environment
-``` conda create --name mynewenv27 python= 2.7 flask sqlalchemy```
+``` conda create --name mynewenv27 python= 2.7```
 
 
 Step 5. remove/delete environment and packages
