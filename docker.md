@@ -23,6 +23,6 @@
 * check container logs  
 ```docker logs 28b3e4a98989```
 
-----------------------------------------------------------------------------
+-------------------------Docker for Application---------------------------------------------------
 * start Tomcat in docker using port 8888  
 ```docker run -d -it -p 8888:8080 tomcat:8.0```
