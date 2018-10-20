@@ -1,15 +1,16 @@
 ## Hello World Example  
 * start a docker container using "docker run image_id:tag"  
-```docker run busybox:latest echo "hello world"```
 
-* run a docker container in a detached mode using "-d"   
-```docker run -d  busybox:latest echo "hello world"```
+```docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG…]```  
+Example: ``` docker run -d -p 80:80 --name pintail-whoami --rm pintailai/pintail-whoami:0.0.1 ```  
+1. run — Specify the run command to tell Docker you want to run a new container  
+2. -d — Tells docker to run the new container in detached mode. This will force the container to run in the background rather than locking up your terminal window  
+3. -p — tells Docker what ports to map from the container to your host OS. The format is {host-os-port:container-port}. In this case docker will map port 80 from your host OS to port 80 inside the container  
+4. '- - name' — names the container “pintail-whoami”  
+5. pintail/pintail-whoami:0.0.1 — this last argument indicates the specific image you would like to start. For images hosted on Docker Hub the format is {organization_name}/{image_name}:{version}
+6. --rm remove the container after it exits
 
-* run a docker container and remove the container after it exits  
-```docker run -rm    busybox:latest echo "hello world"```
 
-* run a docker container with a name  
-```docker run --name hello_world    busybox:latest echo "hello world"```
 ---------------------------------------------------------
 * check running docker  
 ``` docker ps```
@@ -23,7 +24,19 @@
 * check container logs  
 ```docker logs 28b3e4a98989```
 
--------------------------Docker for Application ---------------------------------------------------
+* stop container  
+```docker stop [OPTIONS] CONTAINER [CONTAINER…]```
+
+* remove container  
+```docker rm [OPTIONS] CONTAINER [CONTAINER…]```
+
+* view images  
+```docker images```
+
+* remove images  
+```docker rmi [OPTIONS] IMAGE [IMAGE...]```
+
+-------------------------Docker for Application ---------------------------------------------
 * start Tomcat in docker using port 8888  
 ```docker run -d -it -p 8888:8080 tomcat:8.0```
 * start debian in docker   
